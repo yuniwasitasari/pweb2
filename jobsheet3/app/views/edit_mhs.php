@@ -3,10 +3,18 @@ include '../clasess/database.php';
 $db=new database();
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yuni Wasita</title>
+    <!-- Tambahkan link CSS Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
 <h3>Edit Data Mahasiswa</h3>
 <form action="proses_mhs.php? aksi=update" method="post">
     <?php
-    foreach($db->edit($_GET['id']) as $d){
+    foreach($db->edit($_GET['id'])as $d){
     ?>
     <table>
         <tr>
@@ -27,10 +35,12 @@ $db=new database();
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="simpan" ></td>
+            <td><input type="submit" class ="btn btn-success" value="simpan" ></td>
         </tr>
 </table>
 <?php
 }
 ?>
 </form>
+</table>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
