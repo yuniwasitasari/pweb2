@@ -8,12 +8,12 @@ var $alamat;
 
 //method untuk menampilkan nama
 function tampil_nama(){
-return "Nama saya Yuni Wasita Sari";
+return "Nama saya Yuni Wasita Sari</br>";
 }
 
-//method untuk menampilkan nama
+//method untuk menampilkan alamat
 function tampil_alamat(){
-    //isi method 
+return "Alamat Jalan Tembaga";
 }
 }
 
@@ -22,6 +22,7 @@ $nama_mahasiswa= new mahasiswa();
 
 //menampilkan objek ke layar
 echo $nama_mahasiswa->tampil_nama();
+echo $nama_mahasiswa->tampil_alamat();
 
 class dosen{
     var $nidn;
