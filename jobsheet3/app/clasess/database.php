@@ -58,7 +58,7 @@ class database{
     }
     //
 
-    function update($id, $nim,$nama, $alamat){
+    function update($id, $nim,$nama,$alamat){
         mysqli_query($this->koneksi, "update mahasiswa set nim='$nim', nama='$nama', alamat='$alamat' where id='$id'");
 
     }

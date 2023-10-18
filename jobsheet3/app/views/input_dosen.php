@@ -5,29 +5,34 @@
     <!-- Tambahkan link CSS Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<div class="px-5 py-5">
 <h3>Tambah Data Dosen</h3>
 <form action="proses_dosen.php? aksi=tambah" method="post">
-    <table>
-        <tr>
-            <td>Nama</td>
-            <td><input type="text" name= "nama"></td>
-        </tr>
-        <tr>
-            <td>NIP</td>
-            <td><input type="text" name= "nip"></td>
-        </tr>
-        <tr>
-            <td>Alamat</td>
-            <td>
-                <textarea name="alamat" cols="30" rows="5"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" class ="btn btn-success" value="simpan" ></td>
-        </tr>
-</table>
+<table class="table table-striped">
+  <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" name= "nama" class="form-control" >
+  </div>
+  <div class="mb-3">
+    <label for="nip" class="form-label">NIP</label>
+    <input type="text" name= "nip" class="form-control" >
+  </div>
+  <div class="mb-3">
+    <label for="alamat" class="form-label">Alamat</label>
+    <input type="text" name= "alamat" class="form-control" >
+  </div>
+  </div>
+  <table>
+  <tr>
+        <td></td>
+        <td><input type="submit" class ="btn btn-success" value="simpan" onclick="showAlert()"></td>
+    </tr>
+  </table>
+  </table>
 </form>
-</table>
+<script>
+    function showAlert(){
+        alert ("Data Dosen berhasil ditambahkan")
+    }
+    </script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

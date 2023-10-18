@@ -19,16 +19,16 @@
     echo "</br> Perulangan Do While bilangan prima kurang dari 20 </br>";
     $z = 2;
 do {
-    $Prime = true;
+    $Prima = true;
 
     for ($i = 2; $i < $z; $i++) {
-        if ($z % $i === 0) {
-            $Prime = false;
+        if ($z % $i == 0) {
+            $Prima = false;
             break;
         }
     }
 
-    if ($Prime) {
+    if ($Prima) {
         echo $z . " </br>";
     }
 

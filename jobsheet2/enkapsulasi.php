@@ -8,8 +8,8 @@ class manusia{
 }
 class mahasiswa extends manusia
 {
-    protected $nama_mahasiswa;
-    protected function nama_mahasiswa()
+    protected $nama_mahasiswa; //
+    protected function nama_mahasiswa() //method
     {
         return " Nama Saya".$this->nama;
     }

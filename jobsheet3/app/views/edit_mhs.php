@@ -13,6 +13,7 @@ $db=new database();
 <body>
 <h3>Edit Data Mahasiswa</h3>
 <form action="proses_mhs.php? aksi=update" method="post">
+<table class="table table-striped">
     <?php
     foreach($db->edit($_GET['id'])as $d){
     ?>
@@ -30,7 +31,7 @@ $db=new database();
         <tr>
             <td>Alamat</td>
             <td>
-                <textarea name="alamat" cols="30" rows="5"<?php echo $d['alamat']?>></textarea>
+                <textarea name="alamat" cols="30" rows="5"><?php echo $d['alamat']?></textarea>
             </td>
         </tr>
         <tr>
