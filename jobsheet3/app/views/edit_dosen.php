@@ -6,41 +6,42 @@ $db=new database();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIAKAD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
 
-<form>
+
   <div class="px-5 py-5">
-  <h3>Edit Data Dosen</h3>
-  <form action="proses_dosen.php? aksi=update_dosen" method="post">
-  <?php
+<h3>Edit Data Dosen</h3>
+<form action="proses_dosen.php? aksi=update" method="post">
+<table class="table table-striped">
+    <?php
     foreach($db->edit_dosen($_GET['id'])as $d){
     ?>
     <div class="mb-3">
-    <label for="nama" class="form-label">Nama</label>
-    <input type="hidden" name="id" value="<?php echo $d['id']?>">
-    <input type="text" class="form-control" name="nama" value="<?php echo $d['nama']?>">
+    <label class="form-label">Nama</label>
+    <input type="hidden" class="form-control" name="id" value="<?php echo $d['id']?>">
+    <input type="text" class="form-control" name= "nama" value="<?php echo $d['nama']?>">
   </div>
-  <div class="mb-3">
-    <label for="nip" class="form-label">NIP</label>
+    <div class="mb-3">
+    <label class="form-label">Nip</label>
     <input type="text" class="form-control" name= "nip" value="<?php echo $d['nip']?>">
   </div>
-  <div class="mb-5">
-    <label for="alamat" class="form-label">Alamat</label>
-    <input type="text" class="form-control" name= "alamat" value="<?php echo $d['alamat']?>">
-  </div>
-  <tr>
-            <td></td>
-            <td><input type="submit" class ="btn btn-success mb-3 mt-2" value="simpan" onclick="showAlert()"></td>
-        </tr>
-    </table>
-    <?php
-    }
-    ?>
-</form>
-<script>
+    <div class="mb-3">
+    <label class="form-label">Alamat</label>
+    <textarea name="alamat" cols="30" rows="5" class="form-control" ><?php echo $d['alamat']?></textarea>
+  </</div>
+  <input type="submit" class ="btn btn-success" value="simpan" onclick="showAlert()" >
+  <script>
     function showAlert(){
-        alert ("Data Dosen berhasil ditambahkan")
+        alert ("Data mahasiswa berhasil ditambahkan")
     }
     </script>
-    </div>
+  </table>
+  </table>
+</form>
+</table>
+<?php
+}
+?>
+</form>
+</table>

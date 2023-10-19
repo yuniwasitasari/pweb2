@@ -78,7 +78,6 @@ class database{
     //dosen
     function hapus_dosen($id){
         mysqli_query($this->koneksi, "delete from dosen where id='$id'");
-
     }
     //
 }

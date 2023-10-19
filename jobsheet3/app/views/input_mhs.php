@@ -32,7 +32,7 @@
 </form>
 <script>
     function showAlert(){
-        alert ("Data Dosen berhasil ditambahkan")
+        alert ("Data Mahasiswa berhasil ditambahkan")
     }
     </script>
 <body>

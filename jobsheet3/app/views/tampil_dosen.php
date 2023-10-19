@@ -62,7 +62,7 @@ $db=new database;
         <td><?php echo $x['alamat'] ?></td>
         <td>
           <a href="edit_dosen.php? id=<?php echo $x['id'];?> &aksi=edit"class = "btn btn-warning">Edit</a>  
-          <a href="proses_dosen.php? id=<?php echo $x['id'];?> &aksi=hapus"class ="btn btn-danger">Hapus</a>  
+          <a href="proses_dosen.php? id=<?php echo $x['id'];?> &aksi=hapus" onclick="return confirm('Apakah anda yakin akan menghapus data ini')" class ="btn btn-danger">Hapus</a>  
         </td>
     </tr>
 <?php
