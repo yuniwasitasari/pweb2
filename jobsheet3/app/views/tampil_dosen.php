@@ -26,10 +26,10 @@ $db=new database;
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mahasiswa</a>
+          <a class="nav-link" href="tampil_mahasiswa.php">Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dosen</a>
+          <a class="nav-link" href="tampil_dosen.php">Dosen</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
