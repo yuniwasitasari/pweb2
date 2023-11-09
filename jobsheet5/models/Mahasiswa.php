@@ -29,13 +29,23 @@ class Mahasiswa{
         return mysqli_fetch_assoc($result);
     }
 
-    public function updateMahasiswa($nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama){
+    public function updateMahasiswa($id,$nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama){
     $query="UPDATE mahasiswa set nim='$nim',nama='$nama',alamat='$alamat',tempat_lahir='$tempat_lahir',tanggal_lahir='$tanggal_lahir',jenis_kelamin='$jenis_kelamin',agama='$agama' where id='$id'";  
+    $result = mysqli_query($this->koneksi, $query);
     if ($result){
         return true;
     } else{
         return false;
     }
+    }
+    public function deleteMahasiswa($id){
+        $query = "DELETE FROM mahasiswa WHERE id=$id";
+        $result = mysqli_query($this->koneksi, $query);
+        if ($result){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 ?>

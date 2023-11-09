@@ -72,8 +72,8 @@ $mahasiswa =$mahasiswaController->getAllMahasiswa();
         <td><?php echo $x['jenis_kelamin'] ?></td>
         <td><?php echo $x['agama'] ?></td>
         <td>
-          <a href="edit_mhs.php? id=<?php echo $x['id'];?> &aksi=edit"class = "btn btn-warning">Edit</a>  
-          <a href="proses_mhs.php? id=<?php echo $x['id'];?> &aksi=hapus" onclick="return confirm('Apakah anda yakin akan menghapus data ini')"class ="btn btn-danger">Hapus</a>  
+          <a href="edit.php? id=<?php echo $x['id'];?>" class = "btn btn-warning">Edit</a>  
+          <a href="hapus.php? id=<?php echo $x['id'];?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini')"class ="btn btn-danger">Hapus</a>  
         </td>
     </tr>
 <?php

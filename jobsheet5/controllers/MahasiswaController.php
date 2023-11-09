@@ -18,8 +18,11 @@ class MahasiswaController{
     public function getMahasiswaById($id){
         return $this->model->getMahasiswaById($id);
     }
-    public function updateMahasiswa($nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama){
-        return $this->model->ipdateMahasiswa($nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama);
+    public function updateMahasiswa($id,$nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama){
+        return $this->model->updateMahasiswa($id,$nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama);
+    }
+    public function deleteMahasiswa($id){
+        return $this->model->deleteMahasiswa($id);
     }
 }
 ?>
