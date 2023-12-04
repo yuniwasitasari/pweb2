@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edit Data Mahasiswa</title>
+    <title>Edit Data Dosen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
@@ -29,12 +29,12 @@
 </nav>
 
 <br>
-<h3>Edit Data Mahasiswa</h3>
+<h3>Edit Data Dosen</h3>
 <br>
 
 <?php
 include_once '../../config.php';
-include_once '../../controllers/MahasiswaController.php';
+include_once '../../controllers/DosenController.php';
 
 $database = new database();
 $db = $database->getKoneksi();
@@ -42,24 +42,20 @@ $db = $database->getKoneksi();
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 
-    $mahasiswaController = new MahasiswaController($db);
-    $mahasiswaData = $mahasiswaController->getMahasiswaById($id);
+    $dosenController = new DosenController($db);
+    $dosenData = $dosenController->getDosenById($id);
 
-    if ($mahasiswaData){
+    if ($dosenData){
         if (isset($_POST['submit'])){
-            $nim = $_POST['nim'];
             $nama = $_POST['nama'];
+            $nip = $_POST['nip'];
             $alamat = $_POST['alamat'];
-            $tempat_lahir = $_POST['tempat_lahir'];
-            $jenis_kelamin = $_POST['jenis_kelamin'];
-            $agama = $_POST['agama'];
-
-            $result = $mahasiswaController->updateMahasiswa($id, $nim, $nama, $alamat, $tempat_lahir, $jenis_kelamin, $agama);
+            $result = $dosenController->updateDosen($id,$nama, $nip, $alamat);
 
             if ($result){
-                header("location:mahasiswa?succes=update");
+                header("location:dosen");
             }else {
-                header("location:editMahasiswa");
+                header("location:editDosen");
             }
         }
     }else{
@@ -69,12 +65,12 @@ if(isset($_GET['id'])){
 ?>
 
 <?php
-if ($mahasiswaData){
+if ($dosenData){
 ?>
 <form action="" method="post">
     <div class="row">
     <?php
-    foreach ($mahasiswaData as $d => $value){
+    foreach ($dosenData as $d => $value){
         ?>
         <table border="0">
             <tr>

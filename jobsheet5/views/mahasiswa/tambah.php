@@ -5,9 +5,9 @@
     <!-- Tambahkan link CSS Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<div class="px-5 py-5">
+<div class="px-3 py-3">
 <h3>Tambah Data Mahasiswa</h3>
-<form action="proses_tambah.php?" method="post">
+<form action="proses_tambahMahasiswa" method="post">
 <table class="table table-striped">
   <div class="mb-3">
     <label for="nim" class="form-label">NIM</label>
@@ -26,10 +26,6 @@
     <input type="text" name= "tempat_lahir" class="form-control" >
   </div>
   <div class="mb-3">
-    <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
-    <input type="date" name= "tanggal_lahir" class="form-control" >
-  </div>
-  <div class="mb-3">
     <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
     <select name="jenis_kelamin" class="form-control">
     <option value = "L">laki-laki</option>
@@ -45,10 +41,10 @@
     <option value = "hindu">hindu</option>
     <option value = "budha">budha</option>
     <option value = "konghucu">konghucu</option>
-</select>
-    
+    </select> 
   </div>
   </div>
+
   <table>
   <tr>
         <td></td>

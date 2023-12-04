@@ -10,15 +10,15 @@ if(isset($_POST['submit'])){
     $nama=$_POST['nama'];
     $alamat=$_POST['alamat'];
     $tempat_lahir=$_POST['tempat_lahir'];
-    $tanggal_lahir=$_POST['tanggal_lahir'];
+    // $tanggal_lahir=$_POST['tanggal_lahir'];
     $jenis_kelamin=$_POST['jenis_kelamin'];
     $agama=$_POST['agama'];
 
     $mahasiswaController=new MahasiswaController($db);
-    $result = $mahasiswaController->createMahasiswa($nim,$nama,$alamat,$tempat_lahir,$tanggal_lahir,$jenis_kelamin,$agama);
+    $result = $mahasiswaController->createMahasiswa($nim,$nama,$alamat,$tempat_lahir,$jenis_kelamin,$agama);
 
     if($result){
-        header("location:index.php");
+        header("location:mahasiswa");
     }else{
         header("location:tambah.php");
     }
