@@ -12,8 +12,7 @@ $dosenController = new DosenController($db);
 $dosen = $dosenController ->getAllDosen();
 ?>
 
-<div class="px-2">
-<br>
+<div class="px-5">
 <h3>Data Dosen</h3>
 <a class="btn btn-primary mb-2 mt-2" href="tambahDosen">Tambah Dosen</a>
 
