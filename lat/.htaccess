@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteBase /lat/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home/?$ index.php?page=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^pemasukan/?$ views/pemasukan/index.php?page=$1 [L]
+RewriteRule ^tambahPemasukan/?$ views/pemasukan/tambah.php
+RewriteRule ^proses_tambahPemasukan/?$ views/pemasukan/proses_tambah.php
+RewriteRule ^editPemasukan/?$ views/pemasukan/edit.php
+RewriteRule ^hapusPemasukan/?$ views/pemasukan/hapus.php
+
+RewriteRule ^daftar/?$ views/daftar/index.php
+RewriteRule ^tambahDaftar/?$ views/daftar/tambah.php
+RewriteRule ^proses_tambahDaftar/?$ views/daftar/proses_tambah.php
+RewriteRule ^editDaftar/?$ views/daftar/edit.php
+RewriteRule ^hapusDaftar/?$ views/daftar/hapus.php
