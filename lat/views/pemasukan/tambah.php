@@ -9,8 +9,8 @@ require '../../index.php';
     <br>
     <br>
 <div class="px-3">
-<h3>Tambah Data Pemasukan</h3>
-<form action="proses_tambahPemasukan" method="post">
+<h3 style="text-align: center">Tambah Data Pemasukan</h3>
+<form action="proses_tambahPemasukan" method="post" style="width:50%; margin: auto;">
 <table class="table table-striped">
   <div class="mb-3">
     <label for="tanggal" class="form-label">Tanggal</label>
@@ -26,7 +26,7 @@ require '../../index.php';
   </div>
   <div class="mb-3">
     <label for="nominal" class="form-label">nominal</label>
-    <input type="int" name= "nominal" class="form-control" >
+    <input type="number" name= "nominal" class="form-control" >
   </div>
 
 

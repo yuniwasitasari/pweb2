@@ -8,8 +8,8 @@ require '../../index.php';
     <br>
     <br>
 <div class="px-3">
-<h3>Tambah Data User</h3>
-<form action="proses_tambahDaftar" method="post">
+<h3 style="text-align: center">Tambah Data User</h3>
+<form action="proses_tambahDaftar" method="post" style="width:50%; margin: auto;">
 <table class="table table-striped">
   <div class="mb-3">
     <label for="nama" class="form-label">Nama</label>

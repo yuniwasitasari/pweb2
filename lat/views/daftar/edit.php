@@ -8,7 +8,8 @@ require '../../index.php';
 <div class="px-1">
 <br>
 <div class="px-5">
-<h3>Edit Data User</h3>
+    <br>
+<h3 style="text-align: center">Edit Data User</h3>
 <br>
 
 <?php
@@ -44,28 +45,34 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?php if ($daftarData) { ?>
-
-    <form action="" method="post">
-       
-            <?php foreach ($daftarData as $d => $value) { ?>
-                <tr>
-                    <td>
-                        <label for="<?php echo $d; ?>" class="form-label"><?php echo $d; ?></label>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" name="<?php echo $d; ?>" value="<?php echo $value; ?>" >
-                    </td>
-                </tr>
-                <br>
-            <?php } ?>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" name="submit" value="Simpan" class="btn btn-primary">
-                </td>
-            </tr>
-        </table>
-    </form>
+<form action="" method="post" style="width:40%; margin: auto;">
+    <?php
+    if($daftarData){
+        ?>
+        <div class="mb-3">
+    <label for="nama" class="form-label">Nama</label>
+    <input type="text" name= "nama" class="form-control" value="<?php echo $daftarData['nama'] ?>">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" name= "username" class="form-control" value="<?php echo $daftarData['username'] ?>">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="text" name= "password" class="form-control" value="<?php echo $daftarData['password'] ?>">
+  </div>
+  <div class="mb-3">
+    <label for="level" class="form-label">Level</label>
+    <select name= "level" class="form-control">
+    <option value="sekretaris" <?php if ($daftarData['level'] === 'sekretaris') echo 'selected'; ?>>Sekretaris</option>
+    <option value="lurah" <?php if ($daftarData['level'] === 'lurah') echo 'selected'; ?>>Lurah</option>
+    <option value="kaur" <?php if ($daftarData['level'] === 'kaur') echo 'selected'; ?>>Kaur</option>
+</select>
 </div>
-<?php } ?>
+<div class="mb-3">
+    <button name="submit" class="btn btn-primary">Simpan</button>
+</div>
+<?php
+    } 
+    ?>   
+</form>
